@@ -1,0 +1,195 @@
+/* Reset en basisinstellingen */
+html, body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+    font-family: 'Anton', sans-serif; /* Brutalisme-geïnspireerd lettertype */
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+body {
+    background: #2e2e2e; /* Donkere beton achtergrond */
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+h1 {
+    color: #ff4c4c; /* Rode kleur voor h1 */
+}
+
+h2 {
+    color: #ff4c4c; /* Rode kleur voor h2 */
+}
+
+h3 {
+    color: #ff4c4c; /* Rode kleur voor h3 */
+}
+
+/* Basisstijl voor links */
+a {
+    color: #d0d0d0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4c4c; /* Rood bij hover */
+}
+
+/* Algemene pagina-wrapper */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #383838; /* Donkere beton */
+    border: 12px solid #333; /* Donkere rand */
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hoofdsecties */
+section {
+    background: #444; /* Donkere beton voor secties */
+    border: 6px solid #333;
+    padding: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* Hoofdinhoud */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.main > div {
+    background: #555; /* Donkerder beton */
+    border: 6px solid #333;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+.main > div > h3 {
+    border-bottom: 3px solid #ff4c4c; /* Rode kleur voor onderstreping */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Zijbalk */
+.sidebar {
+    background: #444;
+    border-left: 6px solid #333;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+.sidebar .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ontwerpselectie en archieven */
+.design-selection ul, .design-archives ul, .zen-resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.design-selection li, .design-archives li, .zen-resources li {
+    margin-bottom: 20px;
+}
+
+.design-selection a, .design-archives a, .zen-resources a {
+    display: block;
+    padding: 20px;
+    background: #555;
+    border: 6px solid #333;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.design-selection a:hover, .design-archives a:hover, .zen-resources a:hover {
+    background: #666;
+    color: #ff4c4c; /* Rood bij hover */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #383838;
+    color: #e0e0e0;
+    border-top: 6px solid #333;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.7);
+    margin-top: 50px;
+}
+
+footer a {
+    color: #e0e0e0;
+    margin: 0 20px;
+}
+
+footer a:hover {
+    color: #ff4c4c; /* Rood bij hover */
+}
+
+/* Getekende elementen en animaties */
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6 {
+    position: absolute;
+    width: 120px; /* Kleinere afmetingen om ze meer naar binnen te plaatsen */
+    height: 120px;
+    background: #666; /* Donkere beton */
+    border: 6px solid #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    opacity: 0.8;
+    animation: pulse 6s infinite, rotate 12s linear infinite;
+}
+
+.extra1 { top: 30px; left: 30px; } /* Verklein de afstand vanaf de boven- en linkerzijde */
+.extra2 { top: 30px; right: 30px; } /* Verklein de afstand vanaf de boven- en rechterzijde */
+.extra3 { bottom: 30px; left: 30px; } /* Verklein de afstand vanaf de onder- en linkerzijde */
+.extra4 { bottom: 30px; right: 30px; } /* Verklein de afstand vanaf de onder- en rechterzijde */
+.extra5 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); }
+.extra6 { bottom: 50%; right: 50%; transform: translate(50%, 50%) rotate(45deg); }
+
+@keyframes pulse {
+    0% { transform: scale(1) rotate(45deg); opacity: 0.8; }
+    50% { transform: scale(1.1) rotate(45deg); opacity: 0.6; }
+    100% { transform: scale(1) rotate(45deg); opacity: 0.8; }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(405deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 20px;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 6px solid #333;
+        margin-top: 20px;
+    }
+}
